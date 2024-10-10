@@ -1,36 +1,45 @@
 @charset "UTF-8";
 
-/* conf tag universal */
 *{
-    margin: 0;
-    padding: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
-/* caixa principal */
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
 .container{
-    width: 100%; /*largura*/
-    height: 100vh; /*altura*/
+    width: 100%;
+    height: 100vh;
     background-image: linear-gradient(#66E627, #1da126);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* caixa ao centro */
 .card{
     width: 540px;
+    /* height: 50px; */
     background-color: rgba(9, 243, 24, .5);
     border-radius: 16px;
+
     /* alinhamento do itens */
     display: flex;
     flex-direction: column;
     align-items: center;
+
     /* sombra do box */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .profile-img{
-    width: 200px;
+    width: 120px;
     border-radius: 50%;
     border:#1da126 5px solid;
 
@@ -41,51 +50,53 @@
 }
 
 .container-text{
-    margin-top: -40px;
+    margin-top: -40px; /*Espaçamento na parte superior para criar um espaço entre a bordar e o texto*/
 }
 
 h1.nome{
-    margin: 0;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px 5px 10px;
+    margin: 0; /*Retira o espaçamento externo da margin*/
+    text-shadow: rgba(0, 0, 0, 0.6) 0px 5px 10px;/*cria um sombra em volta do texto, a propriedade precisa de: (cor, deslo horizontal, deslo vertical, raio de desfoque)*/
 }
+
 
 h3.desc{
-    font-weight: 400;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px 5px 10px;
+    font-weight: 400; /*Ajusta o tamanho da fonte*/
+    text-shadow: rgba(0, 0, 0, 0.6) 0px 5px 10px; /*Cria um sombra no texto*/
 }
 
-.andress-icon{
-    width: 22px;    
-    /* altera a opacidade da imagem escala de 0 - 10*/
-    filter: brightness(10);
+.icone-endereco{
+    width: 22px; /*largura do caixa*/
+    filter: brightness(10);  /* altera a opacidade da imagem escala de 0 - 10*/
 }
+
 
 .socials{
-    margin: 30px 0;
-}
-/* margem nos icones do lado direito */
-.socials a{
-    margin-right: 40px;
+    margin: 30px 0; /*margem da tag 'div' */
 }
 
-/* retira a margem do ultimo icone do lado esquerdo */
-.socials a:last-child{
-    margin-right: 0px;
+
+.socials a{
+    margin-right: 40px; /*margem da tag 'a' do lado direito */
+}
+
+
+.socials a:last-child{ /*':last-chil' E um pseudo-elemento CSS que seleciona o último elemento filho */
+    margin-right: 0px; /*retira a margem do ultimo icone do lado esquerdo */
 }
 
 .socials img{
-    width: 50px;
-    transition: all .3s;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 50%;
+    width: 50px; /*largura da tag 'img'*/
+    transition: all .3s; /*velocidade de transição de efeito*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /*Cria um sombra no texto*/
+    border-radius: 50%; /*Cria uma bordar arrendontada para a tag*/
 }
 
-/* animação para almentar o icone quando passar o mouse */
-.socials img:hover{
-    transform: scale(110%);
+
+.socials img:hover{ /*pseudo-classe que permite aplicar estilos a um elemento HTML quando o cursor do mouse passa por cima dele.*/
+    transform: scale(110%); /*aumenta o tamanho do icone para o valor informado*/
 }
-/* animação para diminur o icone quando passar o mouse -'visualmente nao dar pra ver'*/
-.social img:active{
-    transform: scale(100%);
+
+.social img:active{ /*pseudo-classe que permite aplicar estilos a um elemento HTML no exato momento em que ele está sendo ativado.*/
+    transform: scale(100%);/*diminur o icone para o tamanho informado'*/
 }
 
